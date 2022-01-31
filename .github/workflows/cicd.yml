@@ -135,7 +135,7 @@ jobs:
           NUGET_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
           dotnet nuget add source \
-            https://nuget.pkg.github.com/atrauzzi/index.json \
+            https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
             --store-password-in-clear-text \
             --name github-atrauzzi \
             --username ${NUGET_TOKEN_USERNAME} \
