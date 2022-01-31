@@ -150,7 +150,7 @@ jobs:
         run: |
           dotnet pack \
             --configuration="Release" \
-            -property:version="1.0.${{ github.run_number }}"
+            -property:version="1.0.${{ github.run_number }}" \
             -property:RepositoryUrl=https://github.com/${{ github.repository }}
 
       - name: "Show Package"
