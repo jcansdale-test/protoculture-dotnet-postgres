@@ -151,6 +151,7 @@ jobs:
           dotnet pack \
             --configuration="Release" \
             -property:version="1.0.${{ github.run_number }}"
+            -property:RepositoryUrl=https://github.com/${{ github.repository }}
 
       - name: "Show Package"
         run: "ls -Al ./Protoculture.Postgres.Embedded/bin/Release/"
@@ -172,4 +173,3 @@ jobs:
             "./Protoculture.Postgres.Embedded/bin/Release/Protoculture.Postgres.Embedded.*.nupkg" \
             --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
             --api-key "${NUGET_TOKEN}"
-            -p:RepositoryUrl=https://github.com/${{ github.repository }}
