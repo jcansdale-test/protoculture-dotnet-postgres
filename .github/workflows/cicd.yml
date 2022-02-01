@@ -97,29 +97,29 @@ jobs:
   package:
     name: "Package"
     runs-on: "ubuntu-latest"
-    needs: [ 
-        "linux-x86-64", 
-        "windows-x86-64", 
-    ]
+#    needs: [ 
+#        "linux-x86-64", 
+#        "windows-x86-64", 
+#    ]
     steps:
 
       - name: "Checkout"
         uses: "actions/checkout@v2"
 
-      - name: "Download Linux X64 Build" 
-        uses: "actions/download-artifact@v2"
-        with:
-          name: "postgres-linux-x64"
-          path: "Protoculture.Postgres.Embedded/postgres"
+#      - name: "Download Linux X64 Build" 
+#        uses: "actions/download-artifact@v2"
+#        with:
+#          name: "postgres-linux-x64"
+#          path: "Protoculture.Postgres.Embedded/postgres"
 
-      - name: "Download Windows X64 Build"
-        uses: "actions/download-artifact@v2"
-        with:
-          name: "postgres-windows-x64"
-          path: "Protoculture.Postgres.Embedded/postgres"
+#      - name: "Download Windows X64 Build"
+#        uses: "actions/download-artifact@v2"
+#        with:
+#          name: "postgres-windows-x64"
+#          path: "Protoculture.Postgres.Embedded/postgres"
 
-      - name: "Show Builds"
-        run: "ls -Al ./Protoculture.Postgres.Embedded/postgres/"
+#      - name: "Show Builds"
+#        run: "ls -Al ./Protoculture.Postgres.Embedded/postgres/"
 
       - name: "Setup .NET"
         uses: "actions/setup-dotnet@v1"
