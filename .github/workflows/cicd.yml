@@ -118,8 +118,8 @@ jobs:
 #          name: "postgres-windows-x64"
 #          path: "Protoculture.Postgres.Embedded/postgres"
 
-      - name: "Show Builds"
-        run: "ls -Al ./Protoculture.Postgres.Embedded/postgres/"
+#      - name: "Show Builds"
+#        run: "ls -Al ./Protoculture.Postgres.Embedded/postgres/"
 
       - name: "Setup .NET"
         uses: "actions/setup-dotnet@v1"
