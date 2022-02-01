@@ -31,3 +31,4 @@ mkdir -p "${scriptDir}/postgres/linux"
 
 mv "${outputDir}" "${scriptDir}/postgres/linux/${cpuArchitecture}"
 # rm -rf "${outputDir}" "${scriptDir}/postgres/linux/${cpuArchitecture}/include/"
+tree "${scriptDir}/postgres/linux/${cpuArchitecture}/include/"
