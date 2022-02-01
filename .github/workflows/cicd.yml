@@ -97,10 +97,10 @@ jobs:
   package:
     name: "Package"
     runs-on: "ubuntu-latest"
-    needs: [ 
-        "linux-x86-64", 
-        "windows-x86-64", 
-    ]
+#    needs: [ 
+#        "linux-x86-64", 
+#        "windows-x86-64", 
+#    ]
     steps:
 
       - name: "Checkout"
